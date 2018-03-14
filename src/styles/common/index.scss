@@ -1,0 +1,17 @@
+.wrapper{
+    min-height: 900px;
+    min-width: 1800px;
+    background-image: url('../images/bkg.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.container{
+    min-width: 381px;
+    max-height: 397px;
+    background: white; 
+    border-radius: 7px;
+
+}

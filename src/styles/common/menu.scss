@@ -3,5 +3,12 @@
     li{
         display: inline-block;
         list-style: none;
+        
     }
+}
+
+.wrapper{
+    background: url('../../images/bkg.png') center center no-repeat;
+    min-height: 800px;
+    min-width: 1800px;
 }
