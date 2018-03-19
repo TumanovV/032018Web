@@ -1,8 +1,27 @@
-extends ../template
+extends	../template
 
-block variables
-    - var title = 'Мои работы'
+block	variables
+	- var	title	=	'Мои работы'
 
 block content
-    h1 Мои работы
-    include ../common/slider.pug
+	h1	Мои	работы
+	include	../common/slider.pug
+
+        section.section.hero
+		.hero__links
+				ul.socials
+					each item in ['vk', 'tw', 'in']
+						li.soclals__item
+							a(href=`${item}`).socials__link
+			.hero__menu.hamburgers
+			.hero__title
+				.section-title
+					img.section-title__img
+				.user.hero__user
+					.user__pic
+						img.user__avatar
+					.user__description
+						.user__name	Владимир Астахов
+						.user__desc	Личный сайт разработчика
+        section.my-works
+                
