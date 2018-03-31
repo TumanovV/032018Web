@@ -3,4 +3,100 @@ extends ../template
 block variables
 		- var	title	=	'Мои работы'
 
-block content                
+block content
+	
+	section.section.hero
+		.hero__links
+			-
+				var socials = [
+					['vk', 'vk.com'],
+					['vk', 'vk.com'],
+					['vk', 'vk.com'],
+				]
+			ul.socials
+				each item in socials
+					li.soclals__item
+						a(href=`${item[1]}`).socials__link #{1[0]}
+							svg.svg__icon(width="45" height="45")
+								use(xlink:href="assets/images/sprite.svg#git")
+		.hero__menu.hamburgers III
+		.hero__title
+			.section-title
+				img.section-title__img(src="assets/images/portfolio_header.png", alt="")
+			.user.hero__user
+				.user__pic
+					img.user__avatar(src="assets/images/photo.png")
+				.user__description
+					.user__name Владимир Астахов
+					.user__desc Личный сайт разработчика
+
+			
+		.arrow-down.hero__scroll-button
+
+	section.slider
+		.slider__info
+			.info__content
+				.block-subtitle Сайт школы онлайн
+				.block-subtitle__two образования
+				hr.lines(color="#00bfa5")
+				.info__desc html, css, javascript
+				hr.lines(color="#00bfa5")
+				a.link__site(href="loftschool.ru")
+					.button__site Посмотреть сайт
+		.slider__display
+			.slider__display-main__page
+				img.main__page(src="assets/images/big-page.png", alt="")
+		.slider__btns
+			.slider__btns-image
+				img.btns-image(src="assets/images/yoga.png", alt="")
+				a.btns-link(href="")
+					img.btns-link__arrwo-d(src="assets/images/arrow-d.png", alt="")
+			.slider__btns-image
+				img.btns-image(src="assets/images/trial.png", alt="")
+				a.btns-link__up(href="")
+					img.btns-link__arrwo-up(src="assets/images/arrow-up.png", alt="")
+	
+	section.comments
+		.comments-content
+			.content-title
+				img.content-title__img(src="assets/images/header-comments.png", alt="")
+			.block-subtitle Что обо мне говорят
+			.comments-about__me
+				.kdn-about__me
+					.about__me-icon
+						img.about__me-icon__kovch(src="assets/images/kov.png", alt="")
+					.about__me-desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+					.about__me-kovd
+						.about__me-kovd__photo
+							img.photo__kdn(src="assets/images/dmitriy.png", alt="")
+						.about-info__desc
+							.about__me-name Ковальчук Дмитрий
+							.about__me-info основатель Loftschool
+				.sabv-about__me
+					.about__me-icon
+						img.about__me-icon__kovch(src="assets/images/kov.png", alt="")
+					.about__me-desc Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+					.about__me-kovd
+						.about__me-kovd__photo
+							img.photo__kdn(src="assets/images/vladimir.png", alt="")
+						.about-info__desc
+							.about__me-name Владимир Сабанцев
+							.about__me-info преподаватель Loftschool
+					
+			
+			.contact-me
+				.contact-me__title
+					.block-title Связаться со мной
+				.inputs
+					label.input__desc
+						input(type="text" placeholder="Имя").input__name.input__focus
+					label.input__desc
+						input(type="text" placeholder="Email").input__mail.input__focus
+					label.input__desc
+						input(type="textarea" placeholder="Ваше сообщение").input__textarea.input__focus
+				.contact-btns
+					a.btns-links.btns__left(href="")
+						.btns__desc Отправить
+					a.btns-links.btns__right(href="")
+						.btns__desc Очистить
+
