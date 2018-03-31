@@ -1,10 +1,40 @@
 .hero{
     background: url('../images/bckg-index.png') center center no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 93vh;
     width: 100%;
     display: flex;
+    position: relative;
     
+    .hero__user{
+        text-align: center;
+    }
+    
+}
+
+
+.user-description__avatar{
+    background-image: url('../../assets/images/photo2.png');
+    background-size: cover;
+    background-position: top;
+}
+.socials{
+    position: absolute;
+    left: 5%;
+    //top: 10px;
+    
+    display: flex;
+    fill: white;
+   // fill-opacity: 0.5;
+  
+    .soclals__item{
+        fill-opacity: 0.5;
+        padding-right: 18px;
+        &:hover{
+            fill-opacity: 1; 
+        }
+    }
+
 }
 
 .hero__title{
@@ -14,11 +44,18 @@
     align-items: center;
     flex-direction: column;
     
+    .section-title__img{
+        position: absolute;
+        width: 90%;
+        left: 7%;
+        top: 22%;
+    }
 }
 
 .user__avatar{
     width: 200px;
     height: 200px;
+    border-radius: 100px;
   
 
 }
@@ -68,11 +105,21 @@
         height: 100vh;
         width: 50%;
         position: relative;
+        background-color: #efeee9;
+
+        .about__title-bckg{
+            position: absolute;
+            top: -36%;
+            right: -20%;
+        }
         
         .about__left-title{
             position: absolute;
             left: 20%;
             font-size: 63px;
+            top: 8%;
+
+            
         }
 
         .about__left-description{
@@ -96,7 +143,6 @@
 
 
 
-
     .about__right{
         height: 100vh;
         width: 50%;
@@ -110,6 +156,117 @@
     }
 }
 
-.footer{
+.circles {
+    fill: none;
+    stroke-width: 15;
+  }
+  .circle__first {
+    stroke: #dfdcd5;
+  }
+  .circle__second {
+    stroke: #1bb696;
+    stroke-dasharray: .0010 282.6;
+    transition: all 1s;
+  }
+  
+  .item {
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 170px;
+    height: 170px;
+  }
+  
+  .circles:hover .circle-0 {
+     stroke-dasharray: .001 282.6;
+  }
+  .circles:hover .circle-10 {
+     stroke-dasharray: 28.26 282.6;
+  }
+  .circles:hover .circle-15 {
+     stroke-dasharray: 30.30 282.6;
+  }
+
+
+.skills-row__list{
     display: flex;
 }
+
+.skill{
+    width: 123px;
+    height: 123px;
+    position: relative;
+
+    .skill__title{
+        position: absolute;
+        top: 41%;
+        left: 33%;
+    }
+}
+
+.skills-list__item{
+    padding-top: 43px;
+}
+
+.map{
+    position: relative;
+}
+.google-map{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/map.png');
+    background-size: cover;
+}
+
+.map__data{
+    width: 385px;
+    height: 290px;
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    background-color: #fff;
+    border: solid #fff;
+    border-radius: 5px;
+  
+    
+    .contacts{
+        
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 307px;
+        height: 232px;
+        
+        
+        .block-subtitle{
+            font-size: 35px;
+        }
+        
+        .contacts__item.contacts-row{
+            display: flex;
+
+            .contacts-row__icon{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+.footer{
+    position: absolute;
+    height: 148px;
+    width: 100%;
+    background-color: #555b5e;
+    
+    .footer__row{
+        display: flex;
+        height: 73px;
+        position: relative;
+
+        .footer__col{
+            width: 50%;
+        }
+        
+    }
+}
+
