@@ -36,6 +36,10 @@ const paths = {
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
+    },
+    fonts: {
+        src: "src/fonts/**/*.*",
+        dest: "build/assets/fonts/"
     }
 }
 
@@ -98,15 +102,21 @@ function images() {
     return gulp.src(paths.images.src)
         .pipe(gulp.dest(paths.images.dest));
 }
+// переносим шрифты
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
+}
 
 //Экспорты
 exports.templates = templates; // рекомендуемый синтаксис из док-ции gulp 4
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.fonts = fonts;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images,scripts),
+    gulp.parallel(styles, templates, images, fonts, scripts),
     gulp.parallel(watch, server)
 ));

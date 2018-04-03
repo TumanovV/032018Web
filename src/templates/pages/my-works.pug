@@ -7,18 +7,18 @@ block content
 	
 	section.section.hero
 		.hero__links
-			-
+			- 
 				var socials = [
-					['vk', 'vk.com'],
-					['vk', 'vk.com'],
-					['vk', 'vk.com'],
-				]
+						['vk', 'vk.com'],
+						['git', 'github.com'],
+						['in', 'in.com'],
+					]
 			ul.socials
 				each item in socials
 					li.soclals__item
 						a(href=`${item[1]}`).socials__link #{1[0]}
 							svg.svg__icon(width="45" height="45")
-								use(xlink:href="assets/images/sprite.svg#git")
+								use(xlink:href=`assets/images/sprite.svg#${item[0]}`)
 		.hero__menu.hamburgers III
 		.hero__title
 			.section-title
@@ -32,12 +32,15 @@ block content
 
 			
 		.arrow-down.hero__scroll-button
+			svg.hero__sroll-svg(width="26" height="16")
+				use(xlink:href=`assets/images/symbols.svg#portf_arrow_down`)
+		.hero-triangle__right
+		.hero-triangle__left
 
-	section.slider
+	section.section.slider
 		.slider__info
 			.info__content
-				.block-subtitle Сайт школы онлайн
-				.block-subtitle__two образования
+				.block-subtitle Сайт школы онлайн образования
 				hr.lines(color="#00bfa5")
 				.info__desc html, css, javascript
 				hr.lines(color="#00bfa5")
@@ -56,11 +59,11 @@ block content
 				a.btns-link__up(href="")
 					img.btns-link__arrwo-up(src="assets/images/arrow-up.png", alt="")
 	
-	section.comments
+	section.section.comments
 		.comments-content
 			.content-title
 				img.content-title__img(src="assets/images/header-comments.png", alt="")
-			.block-subtitle Что обо мне говорят
+			.block-title Что обо мне говорят
 			.comments-about__me
 				.kdn-about__me
 					.about__me-icon
@@ -86,7 +89,8 @@ block content
 			
 			.contact-me
 				.contact-me__title
-					.block-title Связаться со мной
+				
+					.block-subtitle Связаться со мной
 				.inputs
 					label.input__desc
 						input(type="text" placeholder="Имя").input__name.input__focus

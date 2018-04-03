@@ -11,9 +11,7 @@
 
     background-color: #efebe0;
 }
-.slider__btns{
-  background-color: #bdbbb7
-}
+
 //grids
 
 // .slider{
@@ -52,7 +50,7 @@
 
 //flex
 .slider{
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-flow: wrap column;
 
@@ -78,17 +76,20 @@
     align-items: center;
     
     .block-subtitle{
+      font-family: 'Bernier';
       font-size: 35px;
       text-transform: uppercase;
       text-align: center;
+      padding-bottom: 40px;
+   
 
         
-      &::before{
-        content: "\2014";
-      }
-      &::after{
-        content: "\2014"
-      }
+      // &::before{
+      //   content: "\2014";
+      // }
+      // &::after{
+      //   content: "\2014"
+      // }
 
     }
     .info__desc{
@@ -183,7 +184,7 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100%;
   background: url('../images/bg-comments.png') center center no-repeat;
   background-size: cover;
   
@@ -197,20 +198,22 @@
   .content-title{
     position: absolute;
     width: 30%;
-    left: 34%;
+    left: 38%;
     top:-1%;
 
   }
 
-  .block-subtitle{
+  .block-title{
     display: flex;
-    font-size: 40px;
+    font-family: 'Bernier';
+    font-size: 63px;
     text-transform: uppercase;
     text-align: center;
     flex-direction: column;
     width: 355px;
     height: 120px;
-    padding-top: 47px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
 
@@ -270,12 +273,15 @@
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  
+
+  .block-subtitle{
+    font-family: 'Bernier';
+    font-size: 35px;
+  }
 }
 
-.block-title{
-  font-size: 35px;
-  color:  #00bfa5;
-}
+
 
 .inputs{
   display: flex;

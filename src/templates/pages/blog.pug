@@ -1,17 +1,81 @@
-//- extends ../template
+extends ../template
 
-//- block variables
-//-   - var title = 'Блог'
+block variables
+    -var title = 'Блог'
 
-//- block content
-//-     h1 Блог
-//-     ul
-//-         li
-//-           h2 Заголовок статьи
-//-           p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-//-         li
-//-           h2 Ещё статья
-//-           p Далеко-далеко за словесными горами в стране.
-//-         li
-//-           h2 Последняя статья
-//-           p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Курсивных то осталось за.
+block content
+
+  section.section.hero
+    .hero__links
+      -
+        var socials = [
+          ['vk', 'vk.com'],
+          ['vk', 'vk.com'],
+          ['vk', 'vk.com'],
+        ]
+      ul.socials
+        each item in socials
+          li.socials__item
+            a(href=`${item[1]}`).socials__link #{1[0]}
+              svg.svg__icon(width="45" height="45")
+                use(xlink:href="assets/images/sprite.svg#git")
+    .hero__menu.hamburgers III
+    .hero__title
+      .section-title
+        img.section-title__img(src="assets/images/portfolio_header.png")
+      .user.hero__user
+        .user__pic
+          img.user__avatar(src="assets/images/photo.png")
+        .user__description
+          .user__name Владимир Астахов
+          .user__desc Личный сайт разработчика
+
+      .blog-title
+        .block-subtitle Блог
+        .block-subtitle__info Статьи, которые я написал 
+	
+  section.section.blog
+    nav.block-nav
+      ul.navigation
+        li.nav__list
+          a(href="").nav__link
+            .nav__link-desc Самое важное в Sass
+        li.nav__list
+          a(href="").nav__link
+            .nav__link-desc Приемы в верстке, без которых не обходится ни один сайт
+        li.nav__list
+          a(href="").nav__link
+            .nav__link-desc Самый необходимый набор Gulp плагинов
+        li.nav__list
+          a(href="").nav__link
+            .nav__link-desc Почему я выбрал Jade
+    
+    .blog-content
+      .article-content
+        .article-content__title
+          .block-title Самое важное в sass
+        .article-data
+          .article-data__desc 1 апреля 2018
+        .article-text__content
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+        .article-img
+          img(src="", alt="").article-img__code
+        hr
+      .article-content
+        .article-content__title
+          .block-title Приемы в верстке, без котрых не обходится ни один сайт
+        .article-data
+          .article-data__desc 1 апреля 2018
+        .article-text__content
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi pariatur iure numquam molestiae beatae. Provident doloribus quia corporis, sed aspernatur cumque voluptates ipsam facere dignissimos molestiae perferendis, voluptatibus, autem nostrum?
+

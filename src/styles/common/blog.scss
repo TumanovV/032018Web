@@ -1,0 +1,45 @@
+p{
+  margin: 0;
+}
+.blog{
+  height: 100vh;
+  display: flex;
+  flex-flow: wrap column;
+  background-color: #f5f2f0;
+}
+
+.block-nav{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  .navigation{
+    padding-top: 30px;
+    width: 288px;
+    height: 255px;
+
+    .nav__list{
+      padding-bottom: 36px;
+    }
+
+    .nav__link{
+      text-decoration: none;
+
+      .nav__link-desc{
+        color: #51656e;
+      }
+    }
+  }
+}
+
+.blog-content{
+  height: 100%;
+  width: 70%;
+
+
+
+  .article-content{
+    width: 885px;
+
+  }
+}

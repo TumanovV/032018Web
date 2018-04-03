@@ -1,7 +1,7 @@
 .hero{
     background: url('../images/bckg-index.png') center center no-repeat;
     background-size: cover;
-    height: 93vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     position: relative;
@@ -9,7 +9,32 @@
     .hero__user{
         text-align: center;
     }
-    
+    .hero-triangle__left{
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent transparent #efeee9;
+        left: 0;
+        border-width: 0 50vw 17vh 0
+    }
+    .hero-triangle__right{
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent transparent #eeebdf;
+        right: 0;
+        border-width: 0 0 17vh 50vw
+    }
+    .arrow-down.hero__scroll-button{
+        position: absolute;
+        fill: white;
+        left: 940px;
+        bottom: 3%
+    }
 }
 
 
@@ -98,11 +123,12 @@
 
 .about{
     display: flex;
+    min-height: 100%;
    
 
     .about__left{
    
-        height: 100vh;
+        
         width: 50%;
         position: relative;
         background-color: #efeee9;
@@ -110,14 +136,16 @@
         .about__title-bckg{
             position: absolute;
             top: -36%;
-            right: -20%;
+            right: -42%;
         }
         
         .about__left-title{
             position: absolute;
             left: 20%;
             font-size: 63px;
-            top: 8%;
+            top: -2%;
+
+            
 
             
         }
@@ -125,12 +153,24 @@
         .about__left-description{
             width: 455px;
             position: absolute;
-            right: 0;
+            right: 21px;
+            top: 22px;
+
+            .block-subtitle{
+                font-family: 'Bernier';
+                text-align: center;
+                font-size: 35px;
+                color: #455a64;
+                padding-top: 35px;
+                padding-bottom: 35px;
+
+            }
         }
 
-        .block-subtitle{
+        .block-title{
             text-align: center;
-            font-size: 35px;
+            font-family: 'Bernier';
+            font-size: 63px;
             color: #373e42;
             text-transform: uppercase;
         }
@@ -144,14 +184,36 @@
 
 
     .about__right{
-        height: 100vh;
+ 
         width: 50%;
         background-color: #eeebdf;
+        padding-left: 10px;
 
-        .block-subtitle{
-            text-align: center;
-            font-size: 35px;
+        .skills-row{
+            padding-left: 40px;
+        }
+        .skills-row__title{
+            padding-left: 2px;
+            padding-bottom: 19px;
             color: #373e42;
+            font-weight: bold;
+
+
+        }
+        .block-subtitle{
+                font-family: 'Bernier';
+                text-align: center;
+                font-size: 35px;
+                color: #455a64;
+                padding-top: 35px;
+                padding-bottom: 35px;
+
+                &::after{
+                    content: '\2014';
+                    width: 21px;
+                    // padding-bottom: 10px;
+                    opacity: 0.4;
+                }
         }
     }
 }
@@ -210,63 +272,106 @@
 .map{
     position: relative;
 }
-.google-map{
-    height: 100vh;
+#google-map{
     width: 100%;
-    background-image: url('../images/map.png');
-    background-size: cover;
+    height: 400px;
+    background-color: grey;
 }
 
-.map__data{
-    width: 385px;
-    height: 290px;
-    position: absolute;
-    top: 42%;
-    left: 42%;
-    background-color: #fff;
-    border: solid #fff;
-    border-radius: 5px;
+// .map__data{
+//     width: 385px;
+//     height: 290px;
+//     position: absolute;
+//     top: 42%;
+//     left: 42%;
+//     background-color: #fff;
+//     border: solid #fff;
+//     border-radius: 5px;
   
     
-    .contacts{
+//     .contacts{
         
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 307px;
-        height: 232px;
+//         display:flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         width: 307px;
+//         height: 232px;
         
         
-        .block-subtitle{
-            font-size: 35px;
-        }
+//         .block-subtitle{
+//             font-size: 35px;
+//         }
         
-        .contacts__item.contacts-row{
-            display: flex;
+//         .contacts__item.contacts-row{
+//             display: flex;
 
-            .contacts-row__icon{
-                padding-right: 10px;
-            }
-        }
-    }
-}
+//             .contacts-row__icon{
+//                 padding-right: 10px;
+//             }
+//         }
+//     }
+// }
 
 .footer{
     position: absolute;
+
     height: 148px;
     width: 100%;
-    background-color: #555b5e;
+    background: rgba(83, 89, 93, 0.6) ;
     
     .footer__row{
         display: flex;
         height: 73px;
         position: relative;
 
+        .footer__col--left{
+            display: flex;
+            align-items: center
+        }
+
         .footer__col{
             width: 50%;
+           
+
+            .menu__item{
+                padding-left: 38px;
+            }
+            .menu__link{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                &:hover{
+                    color: #1bb696;
+                }
+            }
         }
         
-    }
-}
+        .footer-soc{
+            display: flex;
+            justify-content: flex-end;
+            fill: rgba(83, 89, 93, 0.6);
+            padding-right: 20px;
+            padding-top: 10px;
 
+            .footer__item{
+                padding-left: 20px;
+                &:hover{
+                    fill: rgba(252, 252, 252, 1);
+                }
+            }
+        }
+        .footer__col.footer__down--left{
+            padding-left: 38px;
+            .footer__desc{
+                width: 540px;
+            }
+        }
+        .footer__down--right{
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 20px;
+        }
+    }
+
+}
