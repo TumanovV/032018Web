@@ -8,8 +8,15 @@
   background-color: #f0efe9;
 }
 .slider__display{
+  .slider__display-main__page{
+    width: 620px;
+    height: 403px;
+    .main__page{
+      width: 100%;
+    }
+  }
 
-    background-color: #efebe0;
+  
 }
 
 //grids
@@ -148,21 +155,35 @@
 .slider__btns{
   position: relative;
   height: 30%;
-  background-color: #bdbbb7;
   display: flex;
   overflow: hidden;
   width: 50%;
   @include tablets{
     width: 100%;
   }
-  .slider__btns__image{
-    position: relative;
-    width: 25%;
-    @include tablets{
-      width: 50%;
-    }
+  // .slider__btns__image{
+  //   position: relative;
+  //   display: flex;
+  //   width: 25%;
+
+  //   @include tablets{
+  //     width: 50%;
+  //   }
+  // }
+}
+
+.slider__btns-image{
+  display: flex;
+  width: 475px;
+  .btns-image{
+    width: 100%;
   }
 }
+
+
+
+
+
 
 .btns-link{
   position: absolute;
@@ -185,7 +206,8 @@
   position: relative;
   width: 100%;
   min-height: 100%;
-  background: url('../images/bg-comments.png') center center no-repeat;
+  background-image: url('../images/bg-comments.png');
+  background-position: 0 -132px;
   background-size: cover;
   
   .comments-content{
@@ -204,6 +226,7 @@
   }
 
   .block-title{
+    line-height: 1;
     display: flex;
     font-family: 'Bernier';
     font-size: 63px;
@@ -263,7 +286,7 @@
   width: 377px;
   height: 438px;
   overflow: hidden;
-  background: url('../images/bg-con.png') center center no-repeat;
+  background-image: url('../images/bg-con.png');
   background-size: cover;
   border-radius: 8px;
 }
@@ -352,3 +375,4 @@
   border: 1px solid #00bfa5;
   border-radius: 0px 0px 5px 0px;
 }
+

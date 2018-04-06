@@ -38,6 +38,7 @@ block content
 		.hero-triangle__left
 
 	section.section.slider
+		.slider__title
 		.slider__info
 			.info__content
 				.block-subtitle Сайт школы онлайн образования
@@ -102,4 +103,24 @@ block content
 						.btns__desc Отправить
 					a.btns-links.btns__right(href="")
 						.btns__desc Очистить
-
+	footer.footer
+		.footer__row
+			.footer__col.footer__col--left
+				nav.menu
+					ul.menu__list
+						each item in ['Мои работы','Обо мне','Блог','Авториазация']
+							li.menu__item
+								a(href="").menu__link #{item}	
+			.footer__col.footer__col--right
+				ul.footer-soc
+					each item in socials
+						li.footer__item
+							a(href=`${item[1]}`).socials__link #{1[0]}
+								svg.footer__icon(width="45" height="45")
+									use(xlink:href=`assets/images/sprite.svg#${item[0]}`)
+		hr.footer__line
+		.footer__row
+			.footer__col.footer__down--left
+				.footer__desc Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+			.footer__col.footer__down--right
+				.footer__info © Владимир Астахов | создано с любовью в LoftSchool | 2016.

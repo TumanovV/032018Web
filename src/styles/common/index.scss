@@ -64,23 +64,23 @@
 
 .hero__title{
     width: 100%;
+    padding-top: 150px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     flex-direction: column;
     
     .section-title__img{
         position: absolute;
-        width: 90%;
-        left: 7%;
-        top: 22%;
+        width: 80%;
+        left: 13%;
+        top: 4%;
     }
 }
 
 .user__avatar{
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
+    width: 144px;
+    border-radius: 144px;
   
 
 }
@@ -315,11 +315,13 @@
 
 .footer{
     position: absolute;
-
     height: 148px;
     width: 100%;
     background: rgba(83, 89, 93, 0.6) ;
     
+    .footer__line{
+        margin: 0;
+    }
     .footer__row{
         display: flex;
         height: 73px;
@@ -363,6 +365,7 @@
         }
         .footer__col.footer__down--left{
             padding-left: 38px;
+            padding-top: 10px;
             .footer__desc{
                 width: 540px;
             }
@@ -371,6 +374,7 @@
             display: flex;
             justify-content: flex-end;
             padding-right: 20px;
+            padding-top: 10px;
         }
     }
 

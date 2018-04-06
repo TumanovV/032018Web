@@ -1,11 +1,25 @@
 p{
   margin: 0;
 }
+.blog-title{
+ 
+
+    font-family: 'Bernier';
+    font-size: 63px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+.block-title__info{
+  color: #fff;
+}
 .blog{
-  height: 100vh;
+  position: relative;
+  height: 100%;
   display: flex;
   flex-flow: wrap column;
-  background-color: #f5f2f0;
+  background-color: #fff
+
 }
 
 .block-nav{
@@ -20,10 +34,22 @@ p{
 
     .nav__list{
       padding-bottom: 36px;
-    }
+      width: 262px;
+      height: 47px;
 
+      &:hover::after{
+        display: block;
+        content:"";
+        width: 3px;
+        height: 42px;
+        color: #1bb696;
+      }
+
+    }
     .nav__link{
       text-decoration: none;
+      
+      
 
       .nav__link-desc{
         color: #51656e;
@@ -42,4 +68,20 @@ p{
     width: 885px;
 
   }
+}
+
+.block-subtitle{
+  font-family: 'Bernier';
+  font-size: 32px;
+  color: #51656e;
+}
+
+.article-data__desc{
+  color: #1bb696;
+  padding: 28px 0px 28px 0px;
+}
+
+hr{
+  width: 684px;
+  margin: 70px 0px 70px 0px;
 }
