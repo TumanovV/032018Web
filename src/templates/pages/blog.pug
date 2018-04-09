@@ -9,16 +9,16 @@ block content
     .hero__links
       -
         var socials = [
-          ['vk', 'vk.com'],
-          ['vk', 'vk.com'],
-          ['vk', 'vk.com'],
+          ['vk','vk.com'],
+          ['git', 'github.com'],
+          ['in', 'in.com'],
         ]
       ul.socials
         each item in socials
           li.socials__item
             a(href=`${item[1]}`).socials__link #{1[0]}
               svg.svg__icon(width="45" height="45")
-                use(xlink:href="assets/images/sprite.svg#git")
+                use(xlink:href=`assets/images/sprite.svg#${item[0]}`)
     .hero__menu.hamburgers III
     .hero__title
       .section-title

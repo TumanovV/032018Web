@@ -1,0 +1,36 @@
+extends ../template
+
+block variables
+  -var title = 'Авторизация'
+
+block content
+  section.section.welcome
+    .welcome-conteiner
+      .user
+        form.form
+          .form-title
+            .block-subtitle Авторизуйтесь
+          .input__one
+            input(type="text" placeholder="Логин").input__text
+          .input__two
+            input(type="text" placeholder="Пароль").input__text
+          label.label__check
+            input(type="checkbox" name="checkbox-test" checked).checkbox
+            span.checkbox-custom
+            span.label Я человек
+          .confirm Вы точно не робот?
+          label.label__radio
+            input(type="radio" name="radio test").radio
+            span.radio-custom
+            span.label Да
+          label.label__radio
+            input(type="radio" name="radio test").radio
+            span.radio-custom
+            span.label Не уверен
+        .links
+          .links__item-back
+            a(href="https://tumanovv.github.io/032018Web/build/welcome.html").links__item-btn На главную
+          .links__item-in
+            a(href="").links__item-btn Войти
+    .copyright
+        .copytext © Владимир Астахов | создано с любовью в LoftSchool | 2016

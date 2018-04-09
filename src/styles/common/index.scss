@@ -32,7 +32,7 @@
     .arrow-down.hero__scroll-button{
         position: absolute;
         fill: white;
-        left: 940px;
+        left: 1046px;
         bottom: 3%
     }
 }
@@ -208,12 +208,12 @@
                 padding-top: 35px;
                 padding-bottom: 35px;
 
-                &::after{
-                    content: '\2014';
-                    width: 21px;
-                    // padding-bottom: 10px;
-                    opacity: 0.4;
-                }
+                // &::after{
+                //     content: '\2014';
+                //     width: 21px;
+                //     // padding-bottom: 10px;
+                //     opacity: 0.4;
+                // }
         }
     }
 }

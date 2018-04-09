@@ -1,0 +1,46 @@
+extends ../template
+
+block variables
+    -var title = 'Добро пожаловать'
+
+block content
+  //- .wrapper
+  //-   .maincontent
+  //-     #parallax.parallax
+  //-       - for (var i = 1; i < 9; i++)
+  //-           .parallax__layer
+  //-             img(src=`/assets/images/paralax/layer-0${i}.png`).parallax__image
+
+  section.section.welcome
+    .welcome-conteiner
+      -
+        var socials = [
+          ['vk', 'vk.com'],
+          ['git', 'github.com'],
+          ['in', 'instagram.com'],
+        ]
+      
+      .user
+        .user__photo
+          img(src="assets/images/photo.png", alt="").user__photo-img
+        .user__info
+          .user__info-name Владимир Астахов
+          .user__info-desc Личный сайт веб разработчика
+        ul.socials__welcome
+          each item in socials
+            li.socials__item
+              a(href=`${item[1]}`).socials__link #{1[0]}
+                svg.svg__icon.svg__icon_welc(width="45" height="45")
+                  use(xlink:href=`assets/images/sprite.svg#${item[0]}`)
+          .links
+            .links__item-left
+              a(href="https://tumanovv.github.io/032018Web/build/my-works.html").links__item-btn Мои работы
+            .links__item-mid
+              a(href="https://tumanovv.github.io/032018Web/build/index.html").links__item-btn Обо мне
+            .links__item-right
+              a(href="https://tumanovv.github.io/032018Web/build/blog.html").links__item-btn Блог
+    .autorisation
+      a(href="").autr__btn Авторизоваться
+    .copyright
+        .copytext © Владимир Астахов | создано с любовью в LoftSchool | 2016
+            

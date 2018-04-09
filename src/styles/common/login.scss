@@ -1,0 +1,132 @@
+.form-title{
+  position: absolute;
+  top: 5%;
+  left: 26%;
+}
+
+
+/* Чекбоkсы ==========================================*/
+.input__text{
+  width: 338px;
+  height: 41px;
+  outline-color: #009688;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.input__two{
+  padding-bottom: 20px;
+}
+.checkbox {
+  display: none;
+}
+.label{
+  font-size: 16px;
+}
+
+.checkbox-custom {
+	position: relative;      /* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
+	width: 18px;             /* Обязательно задаем ширину */
+	height: 18px;            /* Обязательно задаем высоту */
+	border: 1px solid #ccc;
+  border-radius: 3px;
+
+}
+
+/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+.checkbox-custom,
+.label {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+.checkbox:checked + .checkbox-custom::before {
+	content: "";             /* Добавляем наш псевдоэлемент */
+	display: block;			 /* Делаем его блочным элементом */
+	position: absolute;      /* Позиционируем его абсолютным образом */
+	/* Задаем расстояние от верхней, правой, нижней и левой границы */
+  top: 2px;
+	right: 2px;
+	bottom: 2px;
+	left: 2px;
+	background: url('/img/icons/check.png') center center no-repeat;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+  border-radius: 2px;
+  background-color: #00bfa5;
+}
+
+/*===============================================*/
+
+/*Radio===================================================*/
+
+
+.radio {
+	display: none;
+}
+.checkbox,
+.radio {
+	display: none;
+}
+
+.radio-custom {
+	width: 15px;
+	height: 15px;
+	border: 2px solid #ccc;
+	border-radius: 3px;
+	position: relative;
+}
+
+.radio-custom,
+.label {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.radio:checked + .radio-custom::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	bottom: 2px;
+	left: 2px;
+	background: #00bfa5;
+	border-radius: 2px;
+}
+.radio-custom,
+.radio:checked + .radio-custom::before {
+	border-radius: 50%;
+}
+
+.links__item-back{
+  width: 190px;
+  height: 45px;
+  padding: 10px;
+  background-color: #00bfa5;
+  border-right:1px solid #fff;
+  cursor: pointer;
+  &:hover{
+    background-color: #088a81;
+  }
+}
+.links__item-in{
+  width: 190px;
+  height: 45px;
+  padding: 10px;
+  background-color: #00bfa5;
+  cursor: pointer;
+  &:hover{
+    background-color: #088a81;
+  }
+}
+.label__check{
+  padding-top: 30px;
+}
+.label__radio{
+  padding-left: 30px;
+}
+.confirm{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
